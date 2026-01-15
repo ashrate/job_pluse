@@ -1,0 +1,110 @@
+.content {
+    padding: var(--spacing-xl);
+    max-width: 1200px;
+}
+
+.searchBar {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-size-base);
+}
+
+.searchInput {
+    width: 100%;
+    padding: var(--spacing-md);
+    padding-left: calc(var(--spacing-md) * 3);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.companiesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.companyCard {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    transition: var(--transition-base);
+}
+
+.companyCard:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.companyLogo {
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.companyInfo {
+    flex: 1;
+}
+
+.companyName {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.companyDomain {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.companyMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.jobCount {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--color-primary-light);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.emptyState {
+    text-align: center;
+    padding: var(--spacing-3xl);
+    color: var(--color-text-muted);
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}

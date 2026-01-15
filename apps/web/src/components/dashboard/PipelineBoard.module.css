@@ -1,0 +1,115 @@
+.board {
+    display: flex;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    padding: var(--spacing-sm) 0;
+    scrollbar-width: thin;
+}
+
+.column {
+    flex: 0 0 220px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.columnHeader {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.columnTitle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.columnIcon {
+    font-size: var(--font-size-base);
+}
+
+.columnCount {
+    background: var(--color-bg-primary);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.columnCards {
+    padding: var(--spacing-sm);
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cardCompany {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardPosition {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.cardChannel {
+    background: var(--color-bg-tertiary);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.cardDate {
+    font-size: 10px;
+}
+
+.emptyColumn {
+    padding: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: var(--font-size-sm);
+}
